@@ -72,4 +72,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // initialize display
   window._rubricSections.forEach(s => updateSection(s.names, s.sectionId, s.maxPoints));
+
+  // theme toggle init
+  initTheme();
+  const tgl = document.getElementById('theme-toggle');
+  if (tgl) tgl.addEventListener('click', toggleTheme);
 });
+
+function applyTheme(theme) {
+  document.body.classList.toggle('dark', theme === 'dark');
+  try { localStorage.setItem('theme', theme); } catch (e){}
+  const t = document.getElementById('theme-toggle');
+  if (t) {
+    t.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    t.textContent = theme === 'dark' ? '☀️' : '🌙';
+  }
+}
+
+function initTheme(){
+  let stored = null;
+  try { stored = localStorage.getItem('theme'); } catch (e){}
+  if (stored === 'dark' || stored === 'light') { applyTheme(stored); return; }
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark ? 'dark' : 'light');
+}
+
+function toggleTheme(){
+  const isDark = document.body.classList.contains('dark');
+  applyTheme(isDark ? 'light' : 'dark');
+}
