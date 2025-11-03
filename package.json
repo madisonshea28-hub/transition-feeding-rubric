@@ -1,0 +1,12 @@
+{
+  "name": "transition-feeding-rubric",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve public --listen 3000",
+    "vercel-build": "echo 'No build step for static site'"
+  },
+  "devDependencies": {
+    "serve": "^14.0.1"
+  }
+}
