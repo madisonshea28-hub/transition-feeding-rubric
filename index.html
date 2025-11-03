@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transition Feeding Rubric</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Transition Feeding Rubric</h1>
+  <div id="rubric-container">
+
+    <h2>Literacy Design (9 pts)</h2>
+    <table>
+      <tr><th>Criteria</th><th>3 pts</th><th>2 pts</th><th>1 pt</th><th>Score</th></tr>
+      <tr><td>Sentence Structure</td><td><input type="radio" name="sent" value="3"></td><td><input type="radio" name="sent" value="2"></td><td><input type="radio" name="sent" value="1"></td><td id="sent-score">0</td></tr>
+      <tr><td>Word Choice</td><td><input type="radio" name="word" value="3"></td><td><input type="radio" name="word" value="2"></td><td><input type="radio" name="word" value="1"></td><td id="word-score">0</td></tr>
+      <tr><td>Voice & Tone</td><td><input type="radio" name="voice" value="3"></td><td><input type="radio" name="voice" value="2"></td><td><input type="radio" name="voice" value="1"></td><td id="voice-score">0</td></tr>
+    </table>
+    <p class="section-total" id="literacy-total">Section Total: 0 / 9</p>
+    <button class="btn reset" onclick="resetSection(['sent','word','voice'],'literacy-total',9)">Reset Section</button>
+
+    <h2>Content Accuracy & Relevance (21 pts)</h2>
+    <table>
+      <tr><th>Criteria</th><th>3 pts</th><th>2 pts</th><th>1 pt</th><th>Score</th></tr>
+      <tr><td>Feeding Techniques</td><td><input type="radio" name="feed" value="3"></td><td><input type="radio" name="feed" value="2"></td><td><input type="radio" name="feed" value="1"></td><td id="feed-score">0</td></tr>
+      <tr><td>Food Macronutrient Breakdown</td><td><input type="radio" name="macro" value="3"></td><td><input type="radio" name="macro" value="2"></td><td><input type="radio" name="macro" value="1"></td><td id="macro-score">0</td></tr>
+      <tr><td>Local Carb Recommendations</td><td><input type="radio" name="carb" value="3"></td><td><input type="radio" name="carb" value="2"></td><td><input type="radio" name="carb" value="1"></td><td id="carb-score">0</td></tr>
+      <tr><td>Local Fruit Recommendations</td><td><input type="radio" name="fruit" value="3"></td><td><input type="radio" name="fruit" value="2"></td><td><input type="radio" name="fruit" value="1"></td><td id="fruit-score">0</td></tr>
+      <tr><td>Local Vegetable Recommendations</td><td><input type="radio" name="veg" value="3"></td><td><input type="radio" name="veg" value="2"></td><td><input type="radio" name="veg" value="1"></td><td id="veg-score">0</td></tr>
+      <tr><td>Food Safety & Allergens</td><td><input type="radio" name="safe" value="3"></td><td><input type="radio" name="safe" value="2"></td><td><input type="radio" name="safe" value="1"></td><td id="safe-score">0</td></tr>
+      <tr><td>Foods to Avoid</td><td><input type="radio" name="avoid" value="3"></td><td><input type="radio" name="avoid" value="2"></td><td><input type="radio" name="avoid" value="1"></td><td id="avoid-score">0</td></tr>
+    </table>
+    <p class="section-total" id="content-total">Section Total: 0 / 21</p>
+    <button class="btn reset" onclick="resetSection(['feed','macro','carb','fruit','veg','safe','avoid'],'content-total',21)">Reset Section</button>
+
+    <h2>Cultural Appropriateness (12 pts)</h2>
+    <table>
+      <tr><th>Criteria</th><th>3 pts</th><th>2 pts</th><th>1 pt</th><th>Score</th></tr>
+      <tr><td>Linguistic Appropriateness</td><td><input type="radio" name="lang" value="3"></td><td><input type="radio" name="lang" value="2"></td><td><input type="radio" name="lang" value="1"></td><td id="lang-score">0</td></tr>
+      <tr><td>Cultural Context & Beliefs</td><td><input type="radio" name="cult" value="3"></td><td><input type="radio" name="cult" value="2"></td><td><input type="radio" name="cult" value="1"></td><td id="cult-score">0</td></tr>
+      <tr><td>Family & Community Role</td><td><input type="radio" name="fam" value="3"></td><td><input type="radio" name="fam" value="2"></td><td><input type="radio" name="fam" value="1"></td><td id="fam-score">0</td></tr>
+      <tr><td>Format & Key Content</td><td><input type="radio" name="fmt" value="3"></td><td><input type="radio" name="fmt" value="2"></td><td><input type="radio" name="fmt" value="1"></td><td id="fmt-score">0</td></tr>
+    </table>
+    <p class="section-total" id="culture-total">Section Total: 0 / 12</p>
+    <button class="btn reset" onclick="resetSection(['lang','cult','fam','fmt'],'culture-total',12)">Reset Section</button>
+
+    <h2>Visual Communication (12 pts)</h2>
+    <table>
+      <tr><th>Criteria</th><th>3 pts</th><th>2 pts</th><th>1 pt</th><th>Score</th></tr>
+      <tr><td>Clarity & Simplicity</td><td><input type="radio" name="clar" value="3"></td><td><input type="radio" name="clar" value="2"></td><td><input type="radio" name="clar" value="1"></td><td id="clar-score">0</td></tr>
+      <tr><td>Relevance to Message</td><td><input type="radio" name="rel" value="3"></td><td><input type="radio" name="rel" value="2"></td><td><input type="radio" name="rel" value="1"></td><td id="rel-score">0</td></tr>
+      <tr><td>Cultural Representation</td><td><input type="radio" name="rep" value="3"></td><td><input type="radio" name="rep" value="2"></td><td><input type="radio" name="rep" value="1"></td><td id="rep-score">0</td></tr>
+      <tr><td>Strategic Layout</td><td><input type="radio" name="lay" value="3"></td><td><input type="radio" name="lay" value="2"></td><td><input type="radio" name="lay" value="1"></td><td id="lay-score">0</td></tr>
+    </table>
+    <p class="section-total" id="visual-total">Section Total: 0 / 12</p>
+    <button class="btn reset" onclick="resetSection(['clar','rel','rep','lay'],'visual-total',12)">Reset Section</button>
+
+    <h2>Format & Material Utility (15 pts)</h2>
+    <table>
+      <tr><th>Criteria</th><th>3 pts</th><th>2 pts</th><th>1 pt</th><th>Score</th></tr>
+      <tr><td>Organization & Structure</td><td><input type="radio" name="org" value="3"></td><td><input type="radio" name="org" value="2"></td><td><input type="radio" name="org" value="1"></td><td id="org-score">0</td></tr>
+      <tr><td>Visuals</td><td><input type="radio" name="vis" value="3"></td><td><input type="radio" name="vis" value="2"></td><td><input type="radio" name="vis" value="1"></td><td id="vis-score">0</td></tr>
+      <tr><td>Balance</td><td><input type="radio" name="bal" value="3"></td><td><input type="radio" name="bal" value="2"></td><td><input type="radio" name="bal" value="1"></td><td id="bal-score">0</td></tr>
+      <tr><td>Accessibility</td><td><input type="radio" name="acc" value="3"></td><td><input type="radio" name="acc" value="2"></td><td><input type="radio" name="acc" value="1"></td><td id="acc-score">0</td></tr>
+      <tr><td>Text</td><td><input type="radio" name="txt" value="3"></td><td><input type="radio" name="txt" value="2"></td><td><input type="radio" name="txt" value="1"></td><td id="txt-score">0</td></tr>
+    </table>
+    <p class="section-total" id="format-total">Section Total: 0 / 15</p>
+    <button class="btn reset" onclick="resetSection(['org','vis','bal','acc','txt'],'format-total',15)">Reset Section</button>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
