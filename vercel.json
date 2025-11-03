@@ -3,8 +3,9 @@
   "builds": [
     { "src": "api/**/*.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    { "src": "^/$", "dest": "/public/index.html" },
-    { "src": "^/(.*)$", "dest": "/public/$1" }
-  ]
+  "rewrites": [
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/*", "destination": "/public/:splat" }
+  ],
+  "cleanUrls": true
 }
